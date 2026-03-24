@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --cor-primaria: #FFF0F2;
+    --cor-secundaria: #19191F;
+    --cor-terciaria: #F6BEC5;
+    --cor-4: #fff;
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-base: 16px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    gap:24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--cor-primaria);
+}
+
+
+
+
+.menu a{
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    font-weight: 500; 
+}
+
+.menu a:hover{
+    text-decoration: none;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border-radius: 32px;
+}
+
+.cor{
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card1, .card2{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-4); 
+    color: var(--cor-secundaria);             
+    padding: 20px 20px 2rem 20px;        
+    border-radius: 20px; 
+    border: 1px solid var(--cor-secundaria);
+    width: 90%;
+}
+
+
+.banner{
+    padding-left: 8%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.banner h1{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+
+#texto{
+    padding-bottom: 16px;
+}
+
+.sobreMim{
+    gap: 54px;
+    display: flex;
+    align-items: center;
+    margin-left: 202px;
+    margin-right: 202px;
+    justify-content: center;
+}
+
+.titulo-h3{
+    padding-left: 8%;
+    padding-bottom: 2%;
+    padding-top: 5%;
+}
+
+.projetos{
+    display: flex;
+    justify-content: center;
+    gap: 1%
+
+}
+.item-projeto{
+    display: flex;
+    flex-direction: column;
+}
+
+.item-projeto a{
+    text-decoration: none;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-4);
+    width: 6.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 32px;
+    font-weight: 500; 
+}
+
+.item-projeto{
+ gap: 0.5rem;
+}
+
