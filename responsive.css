@@ -1,64 +1,107 @@
-@media (max-width: 768px) {
-  .sobreMim {
-    display: flex;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    
-  }
-}
 
-@media (max-width: 768px) {
-  .sobreMim {
-    display: flex;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    
-  }
-}
-
-@media (max-width: 375px) {
-  .sobreMim {
+@media (max-width: 425px) {
+  .menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 425px) {
   .menu {
     display: flex;
-    justify-content: center;
-    gap:8px;
+    flex-direction: column;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
   .menu {
     display: flex;
-    justify-content: center;
-    gap:4px;
-  }
-}
-
-@media (max-width: 375px) {
-  .menu {
-    display: flex;
-    justify-content: center;
-    gap:4px;
     flex-direction: column;
   }
 }
 
 
-@media (max-width: 1024px) {
+
+@media (max-width: 768px) {
+  .sobreMim {
+      align-items: center;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
   .projetos{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5%
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+    }
+   
 }
+
+@media (max-width: 425px) {
+
+  .sobreMim {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .img .img-mobile{
+   max-width: 100%;
+   height: 14rem;
+   align-items: center;
+  }
+
+  .projetos{
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .banner{
+    padding-left: 4%;
+  }
+  .banner img{
+    height: 32px;
+  }
+  .item-projeto{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
 }
+
+@media (max-width: 320px) {
+  .sobreMim {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 20px;
+  }
+  .img .img-mobile{
+   max-width: 100%;
+   height: 14rem;
+   align-items: center;
+  }
+  .projetos{
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .banner{
+    padding-left: 4%;
+  }
+  .banner img{
+    height: 32px;
+  }
+  .item-projeto{
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .item-projeto img{
+    max-width: 100%;
+   height: 274px;
+  }
+}
+
