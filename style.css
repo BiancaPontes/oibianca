@@ -128,12 +128,19 @@
     width: 50%;
     height: 16rem;
     background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
 }
 
 .logo_rodape{
     width: 50%;
     height: 16rem;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-primaria);  
 }
 
 footer{
