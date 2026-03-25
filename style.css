@@ -124,3 +124,19 @@
  gap: 0.5rem;
 }
 
+.contatos{
+    width: 50%;
+    height: 16rem;
+    background-color: var(--cor-primaria);
+}
+
+.logo_rodape{
+    width: 50%;
+    height: 16rem;
+    background-color: var(--cor-primaria);
+}
+
+footer{
+    display: flex;
+}
+
