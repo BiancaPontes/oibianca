@@ -1,19 +1,88 @@
 
 
 @media (min-width: 375px){
-  .projetos{
+  .menu{
+    display: none;
+  }
+
+  .menu-mobile{
+    height: 100px;
+    width: 100%;
+    background-color: var(--cor-primeria);
+    padding: 2rem;
+    list-style: none;
     display: flex;
+    justify-content: flex-end;
+    
+}
+
+.menu-mobile ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 2rem;
+    list-style: none;   
+}
+
+.menu-mobile a{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: none;
+    text-decoration: none;
+}
+
+.menu-mobile a:hover{
+    background-color: var(--cor-primaria);
+    border: none;
+    font-weight: 600;
+}
+
+
+.projetos{
+    display: flex;
+    margin-bottom: 4rem;
     align-items: center;
     flex-wrap: wrap;
     gap: 1%;
+    
   }
 }
 
 @media (min-width: 320px) {
   .menu {
+    display: none;
+  }
+  .menu-mobile{
+    height: 100px;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    padding: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.menu-mobile ul{
     display: flex;
     flex-direction: column;
-  }
+    gap: 10px;
+    padding-top: 2rem;
+    list-style: none;   
+}
+
+.menu-mobile a{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: none;
+    text-decoration: none;
+}
+
+.menu-mobile a:hover{
+    background-color: var(--cor-primaria);
+    border: none;
+    font-weight: 600;
+}
   .sobreMim {
     flex-direction: column;
     align-items: center;
@@ -30,6 +99,7 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    margin-bottom: 4rem;
   }
   .banner{
     padding-left: 4%;
@@ -51,8 +121,20 @@
 @media (min-width: 768px){
   .menu{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--cor-primaria)
+    
   }
+
+  .menu-mobile{
+    display: none;
+  }
+
   .sobreMim {
     flex-direction: row;
     align-items: center;
@@ -66,9 +148,12 @@
    height: 14rem;
    align-items: center;
   }
+
   .projetos{
     flex-direction: row;
     align-items: center;
+    margin-bottom: 3rem;
+    
   }
 
   .titulo-h3{
@@ -80,6 +165,20 @@
 }
 
 @media (min-width: 1024px){
+  .menu{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: var(--cor-primaria);
+  }
+
+  .menu-mobile{
+    display: none;
+  }
   .sobreMim {
     flex-direction: row;
     align-items: center;

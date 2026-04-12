@@ -14,6 +14,11 @@
     --tamanho-base: 16px;
 }
 
+.menu-mobile.bg-ativo {
+  background-color: var(--cor-terciaria);
+}
+
+
 .menu{
     display: flex;
     justify-content: center;
@@ -25,25 +30,95 @@
     background-color: var(--cor-primaria);
 }
 
+.menu-mobile{
+    height: 100px;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    padding: 2rem;
+    list-style: none;
+    
+}
+
+.menu-mobile ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 2rem;
+    list-style: none;   
+}
+
+.menu-mobile a{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: none;
+    text-decoration: none;
+}
+
+.menu-mobile a:hover{
+    background-color: var(--cor-primaria);
+    border: none;
+    font-weight: 600;
+}
+
+.menu-mobile button{
+    border: none;
+    background-color: transparent;
+}
+
+#menu-btn.ativo{
+ background-color: var(--cor-terciaria);
+}
+
+#menu-list {
+  display: none;
+  position: absolute; 
+  top: 60px; 
+  left: 0;
+  width: 100%;
+  background: var(--cor-terciaria);
+  z-index: 999; 
+  padding: 25px;
+  font-size: 14px;
+}
+
+#menu-list li{
+  padding: 5px;
+}
 
 
+#menu-list a{
+  color: var(--cor-secundaria);
+  background-color: var(--cor-terciaria);
+}
 
-.menu a{
+#menu-list.ativo {
+  display: block;
+}
+
+
+.menu button{
     text-decoration: none;
     color: var(--cor-secundaria);
+    background-color: transparent;
     padding-right: 16px;
     padding-left: 16px;
     padding-bottom: 8px;
     padding-top: 8px;
     font-weight: 500; 
+    border: none;
+    border-radius: 32px;
 }
 
-.menu a:hover{
+.menu button:hover{
     text-decoration: none;
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
     border-radius: 32px;
+    transform: ease-in-out;
+    transition: 0.8s;
 }
+
+
 
 .cor{
     background-color: var(--cor-primaria);
@@ -59,7 +134,7 @@
     flex-direction: column;
     background-color: var(--cor-4); 
     color: var(--cor-secundaria);             
-    padding: 20px 20px 2rem 20px;        
+    padding: 20px 20px 60px 20px;        
     border-radius: 20px; 
     border: 1px solid var(--cor-secundaria);
     width: 90%;
@@ -94,21 +169,22 @@
 .titulo-h3{
     padding-left: 8%;
     padding-bottom: 2%;
-    padding-top: 5%;
+    padding-top: 10%;
 }
 
 .projetos{
     display: flex;
     justify-content: center;
-    gap: 1%
-
+    gap: 1%;
+    margin-bottom: 8rem;
 }
+
 .item-projeto{
     display: flex;
     flex-direction: column;
 }
 
-.item-projeto a{
+.item-projeto button{
     text-decoration: none;
     background-color: var(--cor-secundaria);
     color: var(--cor-4);
@@ -116,8 +192,18 @@
     display: flex;
     justify-content: center;
     padding: 0.5rem;
+    border: none;
     border-radius: 32px;
     font-weight: 500; 
+}
+
+.item-projeto button:hover{
+    text-decoration: none;
+    background-color: #000;
+    color: var(--cor-4);
+    transform: ease-in-out;
+    transition: 0.8s;
+
 }
 
 .item-projeto{
@@ -127,20 +213,17 @@
 .contatos{
     width: 50%;
     height: 16rem;
+    padding-left: 5%;
+    padding-top: 8rem;
     background-color: var(--cor-primaria);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: row;
     justify-content: center;
+    gap: 2rem;
 
 }
 
-.contatos li{
-    gap: 10px;
-}
-
-ul{
-    list-style: none;
-}
 
 .logo_rodape{
     width: 50%;
@@ -148,27 +231,73 @@ ul{
     background-color: var(--cor-primaria);   
 }
 
-.contatos li{
-    gap: 10px;
 
-}
-
-.contatos a{
+.contatos button{
     text-decoration: none;
     color: var(--cor-secundaria);
     padding: 10px;
+    border: none;
+    background-color: var(--cor-primaria);
+    border-radius: 32px;
 
 }
 
-.contatos a:hover{
+.contatos button:hover{
     text-decoration: none;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-primaria);
-    border-radius: 32px;
-    padding: 10px;
+    background-color: #000;
+    color: var(--cor-4);
+    transform: ease-in-out;
+    transition: 0.8s;
 }
 
 footer{
     display: flex;
+}
+
+/* fundo escuro */
+.modal {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+
+}
+
+.modal-content ul{
+    list-style: none;
+}
+
+.modal-content img{
+    max-width: 90%;
+}
+
+
+#close-modal {
+  float: right;
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+
+/* quando ativa */
+.modal.ativo {
+  display: flex;
 }
 
