@@ -1,7 +1,6 @@
 const btn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu-list");
 const menuMobile = document.querySelector(".menu-mobile");
-const menuBtn = document.querySelector(".menu-btn");
 
 btn.addEventListener("click", () => {
   menu.classList.toggle("ativo");
