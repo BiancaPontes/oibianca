@@ -59,12 +59,12 @@
   .banner img {
     height: 32px;
   }
-  
-  .projetos-lista{
+
+  .projetos-lista {
     flex-direction: column;
     align-items: center;
     list-style: none;
-    gap: 1rem;;
+    gap: 1rem;
   }
 
   .item-projeto img {
@@ -119,14 +119,12 @@
     margin-bottom: 3rem;
   }
 
-  .projetos-lista{
-    flex-direction: row;
-    flex-wrap: wrap;
+  .projetos-lista {
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
   }
-
 
   .titulo-h3 {
     display: flex;
