@@ -194,13 +194,6 @@ footer {
   background-color: var(--cor-terciaria);
 }
 
-#menu-btn.ativo {
-  background-color: var(--cor-terciaria);
-}
-
-#menu-list.ativo {
-  display: block;
-}
 
 .menu button:hover {
   background-color: var(--cor-secundaria);
@@ -219,6 +212,14 @@ footer {
 .contatos button:hover {
   background-color: #000;
   color: var(--cor-4);
+}
+
+#menu-btn.ativo {
+  background-color: var(--cor-terciaria);
+}
+
+#menu-list.ativo {
+  display: block;
 }
 
 .modal {
