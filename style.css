@@ -137,7 +137,6 @@ footer {
   font-weight: 600;
 }
 
-
 #menu-list a {
   color: var(--cor-secundaria);
   background-color: var(--cor-terciaria);
@@ -198,7 +197,6 @@ footer {
 .menu-mobile.bg-ativo {
   background-color: var(--cor-terciaria);
 }
-
 
 .menu button:hover {
   background-color: var(--cor-secundaria);
