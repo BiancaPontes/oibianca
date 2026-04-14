@@ -31,3 +31,6 @@ jobs:
 
       - name: Run jscpd
         run: npx jscpd . --threshold 10
+
+      - name: Run Stylelint
+        run: npx stylelint "**/*.css" --ignore-disables
