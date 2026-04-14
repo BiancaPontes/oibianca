@@ -133,6 +133,11 @@ footer {
   background-color: transparent;
 }
 
+.menu-mobile a:hover {
+  font-weight: 600;
+}
+
+
 #menu-list a {
   color: var(--cor-secundaria);
   background-color: var(--cor-terciaria);
@@ -198,10 +203,6 @@ footer {
 .menu button:hover {
   background-color: var(--cor-secundaria);
   color: var(--cor-primaria);
-}
-
-.menu-mobile a:hover {
-  font-weight: 600;
 }
 
 .item-projeto button:hover {
