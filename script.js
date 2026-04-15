@@ -5,7 +5,7 @@ const menuMobile = document.querySelector(".menu-mobile");
 btn.addEventListener("click", () => {
   menu.classList.toggle("ativo");
   menuMobile.classList.toggle("bg-ativo");
-  btn.textContent = btn.textContent === "☰" ? "✕" : "☰";
+  btn.textContent = btn.textContent === '☰' ? '✕' : '☰';
 });
 
 const openBtn = document.getElementById("open-modal");
