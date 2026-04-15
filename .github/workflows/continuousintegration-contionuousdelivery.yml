@@ -27,6 +27,7 @@ jobs:
 
       - run: npx jscpd . --threshold 10
       - run: npx stylelint "**/*.css" || true
+      
 
   delivery:
     runs-on: ubuntu-latest
