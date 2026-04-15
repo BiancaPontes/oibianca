@@ -1,5 +1,4 @@
 name: Continuous Delivery + Deploy
-
 on:
   push:
     branches:
