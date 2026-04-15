@@ -1,0 +1,51 @@
+name: CI + CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Super-linter
+        uses: github/super-linter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: npx jscpd . --threshold 10
+      - run: npx stylelint "**/*.css" || true
+
+  delivery:
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Gerar artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: projeto-zipado
+          path: |
+            index.html
+            style.css
+            script.js
+            responsive.css
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: delivery
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: projeto-zipado
+
+      - run: ls -R
