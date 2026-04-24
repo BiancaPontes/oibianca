@@ -26,26 +26,26 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
    
   test:
-    runs-on: ubuntu-latest
-    needs: lint
+  runs-on: ubuntu-latest
+  needs: lint
 
   strategy:
-      matrix:
-        node-version: [18.x, 20.x]
+    matrix:
+      node-version: [18.x, 20.x]
 
   steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Usar Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
+    - name: Usar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      - name: Instalar dependências
-        run: npm ci
+    - name: Instalar dependências
+      run: npm ci
 
-      - name: Rodar testes
-        run: npm test
+    - name: Rodar testes
+      run: npm test
 
   deliver:
     runs-on: ubuntu-latest
