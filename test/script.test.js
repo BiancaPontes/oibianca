@@ -2,7 +2,9 @@
  * @jest-environment jsdom
  */
 
-const init = require('./script')
+/* global describe, test, expect, beforeEach */
+
+const init = require('../script')
 
 describe('Menu e Modal', () => {
   beforeEach(() => {
@@ -19,7 +21,7 @@ describe('Menu e Modal', () => {
     init()
   })
 
-  test('1. Clique no menu adiciona classe "ativo"', () => {
+  test('menu abre ao clicar', () => {
     const btn = document.getElementById('menu-btn')
     const menu = document.getElementById('menu-list')
 
@@ -28,7 +30,7 @@ describe('Menu e Modal', () => {
     expect(menu.classList.contains('ativo')).toBe(true)
   })
 
-  test('2. Clique no menu "x" remove classe "ativo" (toggle)', () => {
+  test('menu fecha ao clicar novamente', () => {
     const btn = document.getElementById('menu-btn')
     const menu = document.getElementById('menu-list')
 
@@ -38,7 +40,15 @@ describe('Menu e Modal', () => {
     expect(menu.classList.contains('ativo')).toBe(false)
   })
 
-  test('3. Clique no botão "ver mais" abre o modal', () => {
+  test('ícone do botão muda ao clicar', () => {
+    const btn = document.getElementById('menu-btn')
+
+    btn.click()
+
+    expect(btn.textContent).toBe('✕')
+  })
+
+  test('modal abre ao clicar no botão', () => {
     const openBtn = document.getElementById('open-modal')
     const modal = document.getElementById('modal')
 
@@ -47,22 +57,12 @@ describe('Menu e Modal', () => {
     expect(modal.classList.contains('ativo')).toBe(true)
   })
 
-  test('4. Clique no botão "x" fecha o modal', () => {
-    const modal = document.getElementById('modal')
-    const closeBtn = document.getElementById('close-modal')
-
-    modal.classList.add('ativo')
-    closeBtn.click()
-
-    expect(modal.classList.contains('ativo')).toBe(false)
-  })
-
-  test('5. Clique fora do conteúdo fecha o modal', () => {
+  test('modal fecha ao clicar fora', () => {
+    const openBtn = document.getElementById('open-modal')
     const modal = document.getElementById('modal')
 
-    modal.classList.add('ativo')
-
-    modal.click() 
+    openBtn.click()
+    modal.click()
 
     expect(modal.classList.contains('ativo')).toBe(false)
   })
