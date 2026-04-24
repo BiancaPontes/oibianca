@@ -1,31 +1,65 @@
-function init() {
-  const btn = document.getElementById('menu-btn')
-  const menu = document.getElementById('menu-list')
-  const menuMobile = document.querySelector('.menu-mobile')
+/* global describe, test, expect, beforeEach */
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('ativo')
-    menuMobile.classList.toggle('bg-ativo')
-    btn.textContent = btn.textContent === '☰' ? '✕' : '☰'
+const init = require('../script')
+
+describe('Menu e Modal', () => {
+  beforeEach(() => {
+    document.body.innerHTML = `
+      <button id="menu-btn">☰</button>
+      <ul id="menu-list"></ul>
+      <div class="menu-mobile"></div>
+
+      <button id="open-modal"></button>
+      <div id="modal"></div>
+      <button id="close-modal"></button>
+    `
+
+    init()
   })
 
-  const openBtn = document.getElementById('open-modal')
-  const modal = document.getElementById('modal')
-  const closeBtn = document.getElementById('close-modal')
+  test('menu abre ao clicar', () => {
+    const btn = document.getElementById('menu-btn')
+    const menu = document.getElementById('menu-list')
 
-  openBtn.addEventListener('click', () => {
-    modal.classList.add('ativo')
+    btn.click()
+
+    expect(menu.classList.contains('ativo')).toBe(true)
   })
 
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('ativo')
+  test('menu fecha ao clicar novamente', () => {
+    const btn = document.getElementById('menu-btn')
+    const menu = document.getElementById('menu-list')
+
+    btn.click()
+    btn.click()
+
+    expect(menu.classList.contains('ativo')).toBe(false)
   })
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('ativo')
-    }
-  })
-}
+  test('ícone do botão muda ao clicar', () => {
+    const btn = document.getElementById('menu-btn')
 
-module.exports = init
+    btn.click()
+
+    expect(btn.textContent).toBe('✕')
+  })
+
+  test('modal abre ao clicar no botão', () => {
+    const openBtn = document.getElementById('open-modal')
+    const modal = document.getElementById('modal')
+
+    openBtn.click()
+
+    expect(modal.classList.contains('ativo')).toBe(true)
+  })
+
+  test('modal fecha ao clicar fora', () => {
+    const openBtn = document.getElementById('open-modal')
+    const modal = document.getElementById('modal')
+
+    openBtn.click()
+    modal.click()
+
+    expect(modal.classList.contains('ativo')).toBe(false)
+  })
+})

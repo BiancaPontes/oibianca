@@ -1,30 +1,44 @@
-const btn = document.getElementById('menu-btn')
-const menu = document.getElementById('menu-list')
-const menuMobile = document.querySelector('.menu-mobile')
+function init () {
+  const btn = document.getElementById('menu-btn')
+  const menu = document.getElementById('menu-list')
+  const menuMobile = document.querySelector('.menu-mobile')
 
-btn.addEventListener('click', () => {
-  menu.classList.toggle('ativo')
-  menuMobile.classList.toggle('bg-ativo')
-  btn.textContent = btn.textContent === '☰' ? '✕' : '☰'
-})
-
-const openBtn = document.getElementById('open-modal')
-const modal = document.getElementById('modal')
-const closeBtn = document.getElementById('close-modal')
-
-openBtn.addEventListener('click', () => {
-  modal.classList.add('ativo')
-})
-
-closeBtn.addEventListener('click', () => {
-  modal.classList.remove('ativo')
-})
-
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('ativo')
+  if (btn && menu && menuMobile) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('ativo')
+      menuMobile.classList.toggle('bg-ativo')
+      btn.textContent = btn.textContent === '☰' ? '✕' : '☰'
+    })
   }
-})
+
+  const openBtn = document.getElementById('open-modal')
+  const modal = document.getElementById('modal')
+  const closeBtn = document.getElementById('close-modal')
+
+  if (openBtn && modal) {
+    openBtn.addEventListener('click', () => {
+      modal.classList.add('ativo')
+    })
+  }
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('ativo')
+    })
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('ativo')
+      }
+    })
+  }
+}
+
+if (typeof window !== 'undefined') {
+  init()
+}
 
 if (typeof module !== 'undefined') {
   module.exports = init
