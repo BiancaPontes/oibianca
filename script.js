@@ -25,3 +25,7 @@ modal.addEventListener('click', (e) => {
     modal.classList.remove('ativo')
   }
 })
+
+if (typeof module !== 'undefined') {
+  module.exports = init
+}
