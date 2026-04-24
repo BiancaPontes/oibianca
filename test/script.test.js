@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 /* global describe, test, expect, beforeEach */
 
 const init = require('../script')
